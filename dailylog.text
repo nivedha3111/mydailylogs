@@ -41,3 +41,16 @@ TO INSTALL SLACK:
 sudo apt update
 sudo apt install snapd
 sudo snap install slack --classic
+
+
+TO INSTALL Miniconda3
+
+https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+
+conda config --set auto_activate_base false
+
+cd /home/nivedha/miniconda3/
+
+export PATH="/home/nivedha/miniconda3/bin:$PATH"
+source ~/.bashrc
