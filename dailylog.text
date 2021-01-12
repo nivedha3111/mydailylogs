@@ -54,3 +54,45 @@ cd /home/nivedha/miniconda3/
 
 export PATH="/home/nivedha/miniconda3/bin:$PATH"
 source ~/.bashrc
+--------------------------------------------------
+Day # 03 - Jan 12, 2021 - tuesday
+------------------------------------------
+from flask import Flask, render_template
+import os
+import sys
+from flask import request
+from random import randint
+from flask import jsonify
+
+app = Flask(__name__)
+
+@app.route('/')
+
+def result():
+    
+    value1  = 31
+    value2  = 7
+    
+    # You can validate the car brands. If someone is telling the wrong brand name, reply them with the wrong answer
+    
+    value3 = add(value1, value2)
+    
+    result = {
+        'value1' : value1,
+        'value2' : value2,
+        'value3': value3
+    }
+    
+    return jsonify(result)
+    
+    #return content
+    #return render_template('index.html', result=result)
+
+def add(value1, value2):
+    return value1 + value2
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
